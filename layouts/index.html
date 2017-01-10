@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<section id=content>
+  <ul class=posts_listing>
+    {{ range .Data.Pages.ByPublishDate }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div id=date>
+          <time>{{ .Date.Format .Site.Params.dateform }}</time>
+        </div>
+      </li>
+    {{ end }}
+  </ul>
+</section>
+
+{{ partial "footer.html" . }}
+
