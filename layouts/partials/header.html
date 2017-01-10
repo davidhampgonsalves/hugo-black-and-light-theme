@@ -18,9 +18,9 @@
     <title>
       {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{ if eq $url "/" }}
-      {{ .Site.Title }}
+        {{ .Site.Title }}
       {{ else }}
-      {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
+        {{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}
       {{ end }}
     </title>
     <link rel="canonical" href="{{ .Permalink }}">
@@ -39,8 +39,8 @@
     <section id=nav>
       <h1><a href="/">{{ .Site.Params.author }}</a></h1>
       <ul>
-        <li><a href="https://github.com/davidhampgonsalves">GitHub</a>
-          <li><a href="/projects/">Projects</a>
-            <li><a href="http://www.ethicalbarcode.com">Ethical Barcode</a>
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
       </ul>
     </section>
