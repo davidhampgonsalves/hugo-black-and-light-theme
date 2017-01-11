@@ -27,7 +27,6 @@
 
     {{ partial "styles.html" . }}
 
-
     <link rel="shortcut icon" href="/favicon.ico">
 
     {{ if .RSSLink }}
@@ -35,9 +34,9 @@
     {{ end }}
   </head>
 
-  <body lang="{{ .Site.Params.lang }}">
+  <body>
     <section id=nav>
-      <h1><a href="/">{{ .Site.Params.author }}</a></h1>
+      <h1><a href="/">{{ .Site.Params.name }}</a></h1>
       <ul>
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
