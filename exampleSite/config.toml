@@ -1,4 +1,4 @@
-baseurl = "http://hugo.spf13.com/"
+baseurl = "https://www.example.com/"
 title = "Black & Light"
 author = "David Hamp-Gonsalves"
 canonifyurls = true
