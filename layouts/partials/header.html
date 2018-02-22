@@ -15,6 +15,8 @@
     <link rel="icon" type="image/png" href="/favicon_32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="/favicon_128x128.png" sizes="128x128">
 
+    <link rel="stylesheet" href="/styles.css">
+
     <title>
       {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
       {{ if eq $url "/" }}
@@ -24,8 +26,6 @@
       {{ end }}
     </title>
     <link rel="canonical" href="{{ .Permalink }}">
-
-    {{ partial "styles.html" . }}
 
     {{ if .RSSLink }}
       <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
