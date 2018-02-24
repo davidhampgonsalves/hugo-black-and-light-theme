@@ -19,8 +19,6 @@ h6,
 div,
 a,
 time,
-ul,
-li,
 section {
   border:0;
   font:inherit;
@@ -32,6 +30,17 @@ section {
   text-decoration-skip: ink;
 }
 
+
+ul,
+li,
+ol, {
+  border:0;
+  font:inherit;
+  font-size:100%;
+  vertical-align:baseline;
+  color: black;
+  text-decoration-skip: ink;
+}
 
 body {
   font-family:'Open Sans', 'Myriad Pro', Myriad, sans-serif;
@@ -165,16 +174,89 @@ li {
   margin-left: 20px;
 }
 
-ul li {
-  margin-left: 5px;
+h2,
+h3,
+h4 {
+  position: relative;
+  vertical-align: center;
 }
+
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor {
+  opacity: 0.4;
+}
+
+h2 .anchor,
+h3 .anchor,
+h4 .anchor {
+  position: absolute;
+  right: calc(100% - 5px);
+  padding-right: 15px;
+  opacity: 0;
+  transition: 0.2s opacity;
+  font-style: italic;
+  transform: scale(0.7);
+  transform-origin: 50%;
+}
+
+/* ul,
+ol {
+  margin-left: 20px;
+} */
+
+/* ul li,
+ol li {
+  margin-left: 5px;
+} */
+
+/* ul ul,
+ol ol,
+ol ul,
+ul ol {
+  margin-left: 20px;
+} */
 
 ul li {
   list-style-type: none;
 }
+
 ul li:before {
-  content:"\00BB \0020";
+  content: '●';
+  font-size: 80%;
+  position: absolute;
+  right: calc(100% + 10px);
 }
+
+ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+
+.note {
+  padding: 0 1em;
+  border-left: 0.25em solid #dfe2e5;
+}
+.note p {
+  color: #6a737d;
+  font-style: italic;
+}
+
+li {
+  position: relative
+}
+ol li:before {
+  position: absolute;
+  right: calc(100% + 10px);
+  counter-increment: item;
+  content: counters(item, ".") ". ";
+  /* content: counters(item, ".") ". ";
+  counter-increment: item; */
+}
+
+/* ul li:before {
+  content:"\00BB \0020";
+} */
 
 #nav ul li:before, .posts_listing li:before {
   content:'';
@@ -227,8 +309,9 @@ ul li:before {
 }
 
 #nav ul {
-  display: table;
-  margin: 8px auto 0 auto;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
 }
 
 #nav li {

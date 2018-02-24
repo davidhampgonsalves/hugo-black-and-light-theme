@@ -35,7 +35,7 @@
   <body>
     <section id=nav>
       <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
-      <ul>
+      <ul class="links">
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}" target="_blank">{{ .Name }}</a></li>
         {{ end }}
