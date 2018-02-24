@@ -1,0 +1,9 @@
+<div class="link-preview">
+  <a href="{{ .Get `href` }}">
+    <span class="link-preview-title">{{ .Get "title" }}</span>
+    <span class="link-preview-description">{{ .Inner | truncate 100 }}</span>
+    <span class="link-preview-link">{{ .Get `href` }}</span>
+  </a>
+  <a href="{{ .Get `href` }}" style="background-image: url({{ .Get `image` }})">
+  </a>
+</div>
