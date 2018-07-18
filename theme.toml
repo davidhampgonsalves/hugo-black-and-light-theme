@@ -3,7 +3,7 @@ license = "GNU3.0"
 licenselink = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme/blob/master/LICENSE"
 description = ""
 homepage = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
-tags = []
+tags = ["responsive", "minimal", "simple", "personal", "white"]
 features = []
 min_version = 0.17
 
