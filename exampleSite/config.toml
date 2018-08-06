@@ -10,6 +10,7 @@ pygmentscodefences  = true
 
 [params]
   sitename = "Black & Light"
+  disableWebFonts = false
 
 [[menu.main]]
     name = "About"
