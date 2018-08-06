@@ -10,6 +10,7 @@ pygmentscodefences  = true
 
 [params]
   sitename = "Black & Light"
+  disableWebFonts = false # set to true to disable use of remote web fonts
 
 [[menu.main]]
     name = "About"
