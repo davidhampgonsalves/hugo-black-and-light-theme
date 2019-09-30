@@ -8,6 +8,7 @@ A High contrast, text oriented, performant and Javascript-free theme for Hugo.
 * Scriptless (unless you configure Google Analytics).
 * Styles inlined in head.
 * High Contrast.
+* Supports dark color scheme via [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme).
 * High Resolution Favicons.
 
 ![Screenshot](https://github.com/davidhampgonsalves/hugo-black-and-light-theme/blob/master/images/screenshot.png)
