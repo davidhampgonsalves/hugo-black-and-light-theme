@@ -1,0 +1,13 @@
+{{ partial "header.html" . }}
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <hr>
+</div>
+
+<div class="content">
+   {{ partial "within-taxonomy.html" .}}
+
+</div>
+
+{{ partial "footer.html" . }}

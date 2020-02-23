@@ -1,0 +1,16 @@
+{{ partial "header.html" . }} 
+
+
+<div class="header">
+  <h1>{{ .Title }}</h1>
+  <hr>
+</div>
+<div class="content">
+  <ul>
+    {{ partial "links-to-all-tags.html" .}}
+  </ul>
+
+</div>
+
+{{ partial "footer.html" . }}
+

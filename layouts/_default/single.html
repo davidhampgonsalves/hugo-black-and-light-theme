@@ -8,10 +8,13 @@
       {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minute read
     </div>
   {{ end }}
+  {{ partial "show-post-tags.html" .}}
+  <hr>
 
   <div class="entry-content">
     {{ .Content }}
   </div>
+  <hr>
 
   <div id=links>
     {{ if .PrevInSection }}
@@ -24,5 +27,4 @@
 </section>
 
 {{ partial "footer.html" . }}
-
 
