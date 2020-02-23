@@ -10,3 +10,6 @@ min_version = 0.17
 [author]
   name = "David Hamp-Gonsalves"
   homepage = "https://davidhampgonsalves.com"
+
+[taxonomies]
+  tag      = "tags"
