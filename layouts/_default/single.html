@@ -15,10 +15,10 @@
 
   <div id=links>
     {{ if .PrevInSection }}
-      <a class="left-justify" href="{{.PrevInSection.Permalink}}">&laquo; {{.PrevInSection.Title}}</a>
+      <a href="{{.PrevInSection.Permalink}}">&laquo;&nbsp;{{.PrevInSection.Title}}</a>
     {{ end }}
     {{ if .NextInSection }}
-      <a class="right-justify" href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}} &raquo;</a>
+      <a href="{{.NextInSection.Permalink}}">{{.NextInSection.Title}}&nbsp;&raquo;</a>
     {{ end }}
   </div>
 </section>

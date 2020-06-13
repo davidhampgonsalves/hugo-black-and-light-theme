@@ -33,15 +33,8 @@
     display: block;
   }
 
-  .left-justify {
-    float: left;
-    width: 45%;
-  }
-
-  .right-justify {
-    float:right;
-    width: 45%;
-  }
+  .left-justify { float: left; }
+  .right-justify { float:right; }
 
   pre, code {
     font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -272,11 +265,17 @@
   }
 
   #links {
+    display: flex;
+    justify-content: space-between;
     margin: 50px 0 0 0;
   }
 
+  #links :nth-child(1) {
+    margin-right:0.5em;;
+  }
+
   #links :nth-child(2) {
-    float:right;
+    margin-left:0.5em;;
   }
 
   #not-found {
