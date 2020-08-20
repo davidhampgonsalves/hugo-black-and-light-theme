@@ -380,3 +380,8 @@
     }
   }
 </style>
+{{ $optionsCss := (dict "outputStyle" "compressed") }}
+{{ range .Site.Params.customCss -}}
+{{ $customStyle := resources.Get . | toCSS $optionsCss | fingerprint }}
+<link rel="stylesheet" href="{{ $customStyle.RelPermalink }}" integrity="{{ $customStyle.Data.Integrity }}">
+{{- end }}
