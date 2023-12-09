@@ -31,7 +31,7 @@
 
   <body>
     <section id=nav>
-      <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
+      <h1><a class="h-card" href="/">{{ .Site.Params.sitename }}</a></h1>
       <ul>
         {{ range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
